@@ -22,10 +22,16 @@ sap.ui.jsview("fioriapp.view.Main", {
     // app.addPage(oPage);
     // app.setInitialPage("oPage");
     // return app;
-    return new sap.m.Button("idBtn",{
+
+    var oInp1 = new sap.m.Input("idInp")
+
+    var oBtn = new sap.m.Button("idBtn",{
         text:"Click me",
+        type:sap.m.ButtonType.Accept,
         press:oController.fioriController
     })
+    //to refer multiple object by returning the objects in an array
+    return [oInp1, oBtn]
   },
 });
 
