@@ -12,16 +12,20 @@ sap.ui.jsview("fioriapp.view.Main", {
    * @memberOf fioriapp.view.Main
    */
   createContent: function (oController) {
-    var oPage = new sap.m.Page({
-      id: "oPage",
-      title: "Title",
-      content: [new sap.m.Text({ text: "This is a JS view." })],
-    });
+    // var oPage = new sap.m.Page({
+    //   id: "oPage",
+    //   title: "Title",
+    //   content: [new sap.m.Text({ text: "This is a JS view." })],
+    // });
 
-    var app = new sap.m.App("myApp");
-    app.addPage(oPage);
-    app.setInitialPage("oPage");
-    return app;
+    // var app = new sap.m.App("myApp");
+    // app.addPage(oPage);
+    // app.setInitialPage("oPage");
+    // return app;
+    return new sap.m.Button("idBtn",{
+        text:"Click me",
+        press:oController.fioriController
+    })
   },
 });
 

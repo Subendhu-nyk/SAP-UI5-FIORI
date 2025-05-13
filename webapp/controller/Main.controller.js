@@ -5,6 +5,12 @@ sap.ui.define([
 
     return Controller.extend("fioriapp.controller.Main", {
         // Controller logic (if any)
+        onInit :function (){
+
+        },
+        fioriController: function(){
+            alert ("fiori first controller in mvc")
+        }
     });
 });
 
@@ -17,4 +23,4 @@ sap.ui.define([
 //     return  {
 //         // Controller logic (if any)
 //     };
-// });
+// });  
