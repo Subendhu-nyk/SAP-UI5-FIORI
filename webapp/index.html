@@ -1,27 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
     <script
-    id="sap-ui-bootstrap"
-    src="https://sapui5.hana.ondemand.com/resources/sap-ui-core.js"
-      data-sap-ui-theme="sap_fiori_3"
-      data-sap-ui-libs="sap.m"
-      data-sap-ui-compactVersion="edge"
+      id="sap-ui-bootstrap"
+      src="https://sapui5.hana.ondemand.com/1.120.0/resources/sap-ui-core.js"
+      data-sap-ui-theme="sap_bluecrystal"
+      data-sap-ui-libs="sap.m,sap.ui.core"
       data-sap-ui-async="true"
-      Specifies the module to run after SAPUI5 initializes     
-      data-sap-ui-onInit="module:sap/ui/demo/SAP-UI5-FIORI/index"
-      data-sap-ui-resourceroots='{
-        "sap.ui.demo.SAP-UI5-FIORI": "./"
-      }'
+      data-sap-ui-resourceroots='{"fioriapp":"./"}'
     ></script>
-    <!-- data-sap-ui-onInit-- Specifies the module to run after SAPUI5 initializes      -->
-   
+    <!-- data-sap-ui-resourceroots- it will define namespace -->
+    <!-- <script>
+      sap.ui.getCore().attachInit(function() {
+        var oView = new sap.ui.view({
+          id: "idMain",
+          type: sap.ui.core.mvc.ViewType.XML,
+          viewName: "view.App",
+        });
+        var oView1 = new sap.ui.view({
+          id: "idFirst",
+          type: sap.ui.core.mvc.ViewType.XML,
+          viewName: "view.FirstView",
+        });
+        var app = oView.byId('idApp');
+        app.addPages(oView1);
+        app.to('idFirst');
+        oView.placeAt('content');
+      });
+    </script> -->
+
+    <!-- <script>
+      sap.ui.getCore().attachInit(function () {
+        sap.ui.jsview("idDemo", {
+          viewName: "fioriapp.view.Main"
+        }).then(function (oView) {
+          oView.placeAt("content");
+        });
+      });
+    </script> -->
+
+    <script>
+      //       This waits until the SAPUI5 framework (sap.ui.core) is completely initialized.
+      // It's the safe place to start creating views, controls, or app logic.
+      sap.ui.getCore().attachInit(function () {
+        var oView = sap.ui.view({
+          id: "idDemo",
+          viewName: "fioriapp.view.Main",
+          type: "JS",
+        });
+        oView.placeAt("content");
+      });
     </script>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>SAP UI 5</title>
-</head>
-<body class="sapUiBody" id="content">
-    
-</body>
+  </head>
+  <body class="sapUiBody" id="content"></body>
 </html>
