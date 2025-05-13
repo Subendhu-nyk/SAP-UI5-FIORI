@@ -7,3 +7,14 @@ sap.ui.define([
         // Controller logic (if any)
     });
 });
+
+//Scaffolding template
+// sap.ui.define([
+    
+// ], function() {
+//     "use strict";
+
+//     return  {
+//         // Controller logic (if any)
+//     };
+// });
