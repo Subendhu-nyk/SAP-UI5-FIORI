@@ -1,5 +1,13 @@
-<mvc:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" controllerName="fioriapp.controller.MyXMLView">
-<Button id="idBtn" text="click me" press="pressButton"></Button>
+<mvc:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:form="sap.ui.layout.form" controllerName="fioriapp.controller.MyXMLView">
+<form:SimpleForm>
+<form:content>
+<Label text="User Name"></Label>
+<Input id="username"></Input>
+<Label text="Password"></Label>
+<Input id="idPwd" type="Password"></Input>
+</form:content>
+</form:SimpleForm>
+<Button id="idBtn" text="Login" press="pressButton"></Button>
 </mvc:View>
 
 
