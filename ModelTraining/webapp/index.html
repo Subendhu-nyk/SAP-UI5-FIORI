@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <script
+      id="sap-ui-bootstrap"
+      src="https://sapui5.hana.ondemand.com/1.120.0/resources/sap-ui-core.js"
+      data-sap-ui-theme="sap_bluecrystal"
+      data-sap-ui-libs="sap.m,sap.ui.core"
+      data-sap-ui-async="true"
+      data-sap-ui-resourceroots='{"fioriapp":"./"}'
+    ></script>
+  
+    <script>
+      sap.ui.getCore().attachInit(function () {
+        var oView = new sap.ui.view("idMain", {
+          viewName: "fioriapp.view.Main",
+          type: sap.ui.core.mvc.ViewType.XML
+        });
+        oView.placeAt("content");
+      });
+    </script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SAP UI 5</title>
+  </head>
+  <body class="sapUiBody" id="content"></body>
+</html>

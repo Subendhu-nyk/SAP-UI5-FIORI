@@ -1,0 +1,22 @@
+<mvc:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns:form="sap.ui.layout.form" xmlns="sap.m" controllerName="fioriapp.controller.Main">
+<!-- <Page title="Welcome to UI5 Models"> -->
+<form:SimpleForm>
+<form:content>
+<Label text="Emp no"></Label>
+<Input value="{/empStr/empNo}"></Input>
+<Label text="Emp Name"></Label>
+<Input value="{/empStr/empName}"></Input>
+<Label text="Salary"></Label>
+<Input value="{/empStr/salary}"></Input>
+</form:content>
+</form:SimpleForm>
+<Button id="idBtn" text="Login" press="pressButton"></Button>
+<!-- </Page> -->
+</mvc:View>
+
+<!-- 
+{} it indicates data is binded or data binding
+<Input value="{}"></Input> 
+since we are connecting data to the properties of the json address this type of binding is known as property binding 
+-->
+
