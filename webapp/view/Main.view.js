@@ -22,8 +22,12 @@ sap.ui.jsview("fioriapp.view.Main", {
     // app.addPage(oPage);
     // app.setInitialPage("oPage");
     // return app;
-
-    var oInp1 = new sap.m.Input("idInp")
+    var oLabel1= new sap.m.Label({
+        text:"User Name"
+    })
+    var oInp1 = new sap.m.Input("idInp",{
+        width:"150px"
+    })
 
     var oBtn = new sap.m.Button("idBtn",{
         text:"Click me",
@@ -31,7 +35,7 @@ sap.ui.jsview("fioriapp.view.Main", {
         press:oController.fioriController
     })
     //to refer multiple object by returning the objects in an array
-    return [oInp1, oBtn]
+    return [oLabel1, oInp1, oBtn]
   },
 });
 

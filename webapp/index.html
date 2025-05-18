@@ -39,7 +39,7 @@
       });
     </script> -->
 
-    <script>
+    <!-- <script>
       //       This waits until the SAPUI5 framework (sap.ui.core) is completely initialized.
       // It's the safe place to start creating views, controls, or app logic.
       sap.ui.getCore().attachInit(function () {
@@ -50,8 +50,16 @@
         });
         oView.placeAt("content");
       });
+    </script> -->
+    <script>
+      sap.ui.getCore().attachInit(function () {
+        var oXMLView = new sap.ui.view("idXMLView", {
+          viewName: "fioriapp.view.MyXMLView",
+          type: "XML"
+        });
+        oXMLView.placeAt("content");
+      });
     </script>
-
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>SAP UI 5</title>
