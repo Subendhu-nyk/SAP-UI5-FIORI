@@ -12,7 +12,7 @@
 <Input id="idCur"></Input>
 </form:content>
 </form:SimpleForm>
-<Button id="idBtn" text="Login" press="pressButton"></Button>
+<Button id="idBtn" text="Login" press="getData"></Button>
 <!-- </Page> -->
 </mvc:View>
 

@@ -21,6 +21,10 @@ sap.ui.define([
             //step3 : make the model known to the application
             sap.ui.getCore().setModel(oModel)
 
+            
+        },
+        //data binding on button click
+        getData : function(){
             //Binding the model in programmatical way by getting the control object
             //1 way - through by binding the value            
             const oCur= this.getView().byId('idCur');
