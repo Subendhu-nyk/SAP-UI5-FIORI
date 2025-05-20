@@ -7,7 +7,9 @@
 <Label text="Emp Name"></Label>
 <Input value="{/empStr/empName}"></Input>
 <Label text="Salary"></Label>
-<Input value="{/empStr/salary}"></Input>
+<Input id="idSal"></Input>
+<Label text="Currency"></Label>
+<Input id="idCur"></Input>
 </form:content>
 </form:SimpleForm>
 <Button id="idBtn" text="Login" press="pressButton"></Button>
