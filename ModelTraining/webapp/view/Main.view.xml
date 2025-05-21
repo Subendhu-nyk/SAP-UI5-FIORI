@@ -1,5 +1,6 @@
 <mvc:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns:form="sap.ui.layout.form" xmlns="sap.m" controllerName="fioriapp.controller.Main">
-<!-- <Page title="Welcome to UI5 Models"> -->
+<App>
+<Page title="Welcome to UI5 Models">
 <form:SimpleForm>
 <form:content>
 <Label text="Emp no"></Label>
@@ -13,7 +14,9 @@
 </form:content>
 </form:SimpleForm>
 <Button id="idBtn" text="Login" press="getData"></Button>
-<!-- </Page> -->
+</Page>
+</App>
+
 </mvc:View>
 
 <!-- 
