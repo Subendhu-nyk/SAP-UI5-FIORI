@@ -1,12 +1,13 @@
 sap.ui.define([
-    "sap/ui/core/mvc/Controller"
-], function(Controller) {
+    "sap/ui/core/mvc/Controller",
+    "fioriapp/model/models"
+], function(Controller,reusableModelCode) {
     "use strict";
     return Controller.extend("fioriapp.controller.Main", {
         onInit: function(){
             //creating models
             //step1 : create a model object
-            var oModel = new sap.ui.model.json.JSONModel();
+            // var oModel = new sap.ui.model.json.JSONModel();
 
             //step2 : set the data to model
             // oModel.setData({
@@ -17,11 +18,12 @@ sap.ui.define([
             //         "currency":"EUR"
             //     }
             // })
-            //modularies way to set data
-            oModel.loadData("model/mockData/myMockData.json")
-            //step3 : make the model known to the application
+            // //modularies way to set data
+            // oModel.loadData("model/mockData/myMockData.json")
+            var oModel =reusableModelCode.createMyModel();
+            // //step3 : make the model known to the application
             sap.ui.getCore().setModel(oModel)
-
+            
             
         },
         //data binding on button click
